@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="pacific.css" />
+    <title>Reservations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background: white;">
+    <div id="wrapper" style="background: white;">
+        <h1 style="background: #90c7e3;">Pacific Trails Resort</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="yurts.html">Yurts</a>
+            <a href="activities.html">Activities</a>
+            <a href="#">Reservations</a>
+        </nav>
+        
+        <div id="reshero">
+            <!-- <img src="ocean.jpg" alt="A photo of a coast" /> -->
+        </div>
+
+        <main style="background: white;">
+            <h2>Reservations at Pacific Trails</h2>
+            <h3>Contact Us</h3>
+            <p>Required fields are marked with an asterisk *.</p>
+
+            <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+                <label for="myFName">* First Name:</label> 
+                <input type="text" id="myFName" name="myFName" required><br>
+
+                <label for="myLName"></label> * Last Name:
+                <input type="text" id="myLName" name="myLName" required><br>
+
+                <label for="myEmail"></label> * E-mail:
+                <input type="email" id="myEmail" name="myEmail" required><br>
+
+                <label for="myPhone"></label> Phone:
+                <input type="text" id="myPhone" name="myPhone"><br>
+
+                <label for="myDate"></label> Arrival Date:
+                <input type="date" id="myDate" name="myDate"><br>
+
+                <label for="myNights"></label> Nights:
+                <input type="number" id="myNights" name="myNights" min="1" max="14"><br>
+
+                <label for="myComments"></label> * Comments:
+                <textarea id="myComments" name="myComments" rows="2" cols="20" required></textarea><br>
+
+                <input type="submit" id="mySubmit" value="Submit">
+            </form>
+        </main>
+
+        <footer>
+            Copyright © 2020 Pacific Trails Resort<br />
+            <a href="mailto:lluper@ivytech.edu">lluper@ivytech.edu</a>
+        </footer>
+    </div>
+</body>
+</html>

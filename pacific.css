@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -127,6 +128,47 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* New Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input,
+textarea {
+    margin-bottom: 0.5em;
+}
+
+#reshero {
+    height: 300px;
+    display: block;
+    background-image: url('ocean.jpg');  
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+@media (min-width: 600px) {
+    form {
+        width: 60%;
+        display: grid;
+        grid-template-columns: 10em 1fr;
+        grid-gap: 1em;
+    }
+
+    input[type="submit"] {
+        grid-column: 2;
+        width: 9em;
+    }
+
+    #reshero {
+        background-size: 100% 100%;
+    }
 }
 
 @media (min-width: 1024px) {
