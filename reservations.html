@@ -4,10 +4,22 @@
     <link rel="stylesheet" href="pacific.css" />
     <title>Reservations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Function to validate phone number format
+        function validateForm(event) {
+            const phoneInput = document.getElementById("myPhone").value;
+            const phonePattern = /^\d{3}-\d{3}-\d{4}$/; // Regular expression for xxx-xxx-xxxx
+
+            if (phoneInput && !phonePattern.test(phoneInput)) {
+                alert("Please enter the phone number in the format xxx-xxx-xxxx.");
+                event.preventDefault(); // Prevent form submission
+            }
+        }
+    </script>
 </head>
 <body style="background: white;">
     <div id="wrapper" style="background: white;">
-        <h1 style="background: #90c7e3;">Pacific Trails Resort</h1>
+        <h1>Pacific Trails Resort</h1>
 
         <nav>
             <a href="index.html">Home</a>
@@ -17,7 +29,7 @@
         </nav>
         
         <div id="reshero">
-            <!-- <img src="ocean.jpg" alt="A photo of a coast" /> -->
+            <img src="ocean.jpg" alt="A photo of a coast" />
         </div>
 
         <main style="background: white;">
@@ -25,7 +37,7 @@
             <h3>Contact Us</h3>
             <p>Required fields are marked with an asterisk *.</p>
 
-            <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+            <form method="post" action="https://webdevbasics.net/scripts/pacific.php" onsubmit="validateForm(event)">
                 <label for="myFName">* First Name:</label> 
                 <input type="text" id="myFName" name="myFName" required><br>
 
@@ -42,7 +54,7 @@
                 <input type="email" id="myEmail" name="myEmail" required><br>
 
                 <label for="myPhone"></label> Phone:
-                <input type="text" id="myPhone" name="myPhone"><br>
+                <input type="text" id="myPhone" name="myPhone" placeholder="xxx-xxx-xxxx"><br>
 
                 <label for="myDate"></label> Arrival Date:
                 <input type="date" id="myDate" name="myDate"><br>

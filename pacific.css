@@ -1,10 +1,9 @@
-
 * {
     box-sizing: border-box;
 }
 
 #wrapper {
-    background-color: #90c7e3;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     min-width: 960px;
     max-width: 2048px;
@@ -12,6 +11,10 @@
     margin: 0 auto;
 }
 
+#wrapper h1 {
+    background-color: #003366;
+    color: #ffffff;
+}
 body {
     background-color: #90C7E3;
     color: #666666;
@@ -35,12 +38,12 @@ h1 {
 
 nav {
     text-align: center;
-    background-color: #003366;
+    background-color: #ffffff;
     padding: 10px 0;
 }
 
 nav a {
-    color: white;
+    color: #003366;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -70,7 +73,6 @@ main {
 
 h2, h3 {
     color: #003366;
-    border-bottom: 2px solid #003366;
     padding-bottom: 5px;
 }
 
@@ -81,13 +83,15 @@ dl {
 
 dl dt, dl dd {
     width: 30%;
-    margin-right: 10px;
+    
+    margin: 0 10px 20px 40px;
     color: #003366;
 }
 
-dl dd {
-    margin-bottom: 20px;
+dl dt {
+    border-bottom: 2px solid #003366;
 }
+
 
 /* Table styling */
 table {
@@ -151,7 +155,11 @@ textarea {
     background-repeat: no-repeat;
 }
 
-
+/* New video element style */
+video {
+    float: right; /* Float the video to the right */
+    margin: 2em; /* Set margin */
+}
 
 @media (min-width: 600px) {
     form {
